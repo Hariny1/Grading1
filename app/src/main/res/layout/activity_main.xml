@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Course"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginTop="8dp"
+        android:text="Course:"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:text="Name:"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/Course"
+        app:layout_constraintTop_toBottomOf="@+id/Course" />
+
+    <TextView
+        android:id="@+id/RollNo"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:text="RollNo.:"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/Name"
+        app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+    <TextView
+        android:id="@+id/AssNo"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:text="AssignmentNo:"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/Course"
+        app:layout_constraintStart_toEndOf="@+id/Course"
+        app:layout_constraintTop_toBottomOf="@+id/RollNo" />
+
+
+    <TextView
+        android:id="@+id/CourseT"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="8dp"
+        android:text="Machine Learning"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/RollNoT"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toEndOf="@+id/Course"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/NameT"
+        android:layout_width="35dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginStart="92dp"
+        android:text="Ram"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/Name"
+        app:layout_constraintTop_toBottomOf="@+id/CourseT" />
+
+    <TextView
+        android:id="@+id/RollNoT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="37"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/NameT"
+        app:layout_constraintTop_toBottomOf="@+id/NameT" />
+
+    <TextView
+        android:id="@+id/AssNoT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/RollNoT"
+        app:layout_constraintTop_toBottomOf="@+id/RollNoT" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="64dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Student History"
+
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/CourseT"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- SeekBar can be added to pick the required colour for the stylus
+            Implementation of SeekBar as a colour picker is to be seen
+            -->
+
+
+    <!-- SeekBar can be added to pick the required colour for the stylus
+          Implementation of SeekBar as a colour picker is to be seen
+          -->
+
+
+    <TextView
+        android:id="@+id/Writer"
+        android:layout_width="35dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="540dp"
+        android:layout_marginTop="48dp"
+        android:text="Writer"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eraserBtn" />
+
+    <TextView
+        android:id="@+id/Copy"
+        android:layout_width="52dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="40dp"
+        android:text="Plagiarism"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/Writer"
+        app:layout_constraintTop_toBottomOf="@+id/Writer" />
+
+    <Button
+        android:id="@+id/Highlight"
+        android:layout_width="71dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Highlight Keyword"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/Marks"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.example.harinyg.grading1.utils.BaseFrameLayout
+        android:id="@+id/spenViewContainer"
+        android:layout_width="521dp"
+        android:layout_height="227dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+
+        <RelativeLayout
+            android:id="@+id/spenViewLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+        </RelativeLayout>
+
+    </com.example.harinyg.grading1.utils.BaseFrameLayout>
+
+    <TextView
+        android:id="@+id/Comments"
+        android:layout_width="46dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="32dp"
+        android:text="Comments"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/Copy"
+        app:layout_constraintTop_toBottomOf="@+id/Copy" />
+
+    <TextView
+        android:id="@+id/CommentsT"
+        android:layout_width="48dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="Neat"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Comments"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Marks"
+        android:layout_width="44dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="28dp"
+        android:text="Marks"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/Comments"
+        app:layout_constraintTop_toBottomOf="@+id/Comments" />
+
+    <ImageView
+        android:id="@+id/penBtn"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="116dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_tool_bg"
+        android:src="@drawable/selector_pen"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/eraserBtn"
+        android:layout_width="38dp"
+        android:layout_height="25dp"
+        android:layout_margin="1dip"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_tool_bg"
+        android:src="@drawable/selector_eraser"
+        app:layout_constraintStart_toEndOf="@+id/penBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bgImgBtn"
+        android:layout_width="39dp"
+        android:layout_height="25dp"
+        android:layout_margin="1dip"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_tool_bg"
+        android:src="@drawable/selector_image"
+        app:layout_constraintStart_toEndOf="@+id/eraserBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/SaveButton"
+        android:layout_width="54dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="344dp"
+        android:textSize="10sp"
+        android:text="Save"
+        app:layout_constraintStart_toEndOf="@+id/PrevButton"
+        app:layout_constraintTop_toBottomOf="@+id/spenViewContainer" />
+
+    <Button
+        android:id="@+id/PrevButton"
+        android:layout_width="62dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="8dp"
+        android:text="Prev"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/AssNo"
+        app:layout_constraintTop_toBottomOf="@+id/spenViewContainer"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/NextButton"
+        android:layout_width="54dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="228dp"
+        android:textSize="10sp"
+        android:text="Next"
+        app:layout_constraintStart_toEndOf="@+id/PrevButton"
+        app:layout_constraintTop_toBottomOf="@+id/spenViewContainer" />
+
+
+    <Button
+        android:id="@+id/ResetButton"
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="280dp"
+        android:textSize="10sp"
+        android:text="Reset"
+        app:layout_constraintStart_toEndOf="@+id/PrevButton"
+        app:layout_constraintTop_toBottomOf="@+id/spenViewContainer" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="43dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="48dp"
+        android:text="Ram"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/Writer"
+        app:layout_constraintTop_toBottomOf="@+id/bgImgBtn" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="49dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="44dp"
+        android:textSize="10sp"
+        android:text="10%"
+        app:layout_constraintStart_toEndOf="@+id/Copy"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="31dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="28dp"
+        android:text="08"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CommentsT" />
+
+</android.support.constraint.ConstraintLayout>
+
+    <!-- Image View and under that Samsung BaseFrameLayout -->
