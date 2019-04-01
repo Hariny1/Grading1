@@ -1,0 +1,10 @@
+1. Image is in greyscale then continue. done
+print x[pixel no in y axis ,pixel no in x axis]
+if output is 0 0 0 then it is gray else it is white and there is an empty space.
+
+
+2. The gray pixels are not touching the window.
+3. The ratio of grey pixels to white pixels should be max.
+
+4. The sliding window should increase in width and height.
+First increase the width then the height.
